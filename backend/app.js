@@ -12,11 +12,15 @@ dotenv.config({ path: "./config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: [
+      "http://localhost:5173",
+      "https://mern-stack-restaurant-reservation-m-seven.vercel.app"
+    ],
     methods: ["POST"],
-    credentials: true,
+    credentials: true
   })
 );
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
