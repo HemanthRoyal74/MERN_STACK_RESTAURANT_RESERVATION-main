@@ -18,7 +18,7 @@ const Reservation = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://onrender.com",
+        "https://mern-stack-restaurant-reservation-main-fdnv.onrender.com/",
         { firstName, lastName, email, phone, date, time },
         {
           headers: {
